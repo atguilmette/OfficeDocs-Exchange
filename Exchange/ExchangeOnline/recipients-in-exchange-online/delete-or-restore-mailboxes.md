@@ -95,7 +95,7 @@ To verify that you've successfully deleted an Exchange Online mailbox, do one of
 - In the Exchange Management Shell, use the following syntax to verify that the mailbox has been deleted.
     
   ```
-  Get-Mailbox <identity>
+  Get-Mailbox -Identity <identity>
   ```
 
     The command will return an error stating that the mailbox couldn't be found, which verifies that the mailbox was deleted.
@@ -119,10 +119,10 @@ You can recover soft-deleted mailboxes using the PowerShell cmdlet below. The cm
   
 1. [Connect to Exchange PowerShell](https://go.microsoft.com/fwlink/?LinkID=785881)
     
-2. Run the **Undo- SoftDeletedMailbox** cmdlet. 
+2. Run the **Undo-SoftDeletedMailbox** cmdlet. 
     
   ```
-  Undo- SoftDeletedMailbox allieb@contoso.com -WindowsLiveID allieb@contoso.com -Password (ConvertTo-SecureString -String 'Pa$$word1' -AsPlainText -Force) 
+  Undo-SoftDeletedMailbox allieb@contoso.com -WindowsLiveID allieb@contoso.com -Password (ConvertTo-SecureString -String 'Pa$$word1' -AsPlainText -Force) 
   
   ```
 
